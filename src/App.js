@@ -38,6 +38,7 @@ function App() {
   const resetTurn = () => {
     setChoiceOne(null)
     setChoiceTwo(null)
+    setTurn(prevTurn => prevTurn + 1)
     setDisabled(false)
   }
 
@@ -53,10 +54,7 @@ function App() {
         })
         resetTurn()
       } else {
-        setTimeout(() => {
-          setTurn(prevTurn => prevTurn + 1)
-          resetTurn()
-        }, 1000)
+        setTimeout(() => resetTurn(), 1000)
       }
     }
 
