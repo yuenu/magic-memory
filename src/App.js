@@ -7,6 +7,6 @@ function App() {
       <button>New Game</button>
     </div>
   );
-}
+} 
 
 export default App
